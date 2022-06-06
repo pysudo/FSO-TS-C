@@ -16,7 +16,6 @@ const calculator = (a: number, b: number, op: Operation): number => {
 
 try {
   console.log(calculator(4, 5,'add'));
-  console.log(process.argv);
 }
 catch(error: unknown) {
   let errorMessage = "Something went wrong!";
@@ -26,3 +25,6 @@ catch(error: unknown) {
 
   console.log(errorMessage);
 }
+
+
+export { calculator };
