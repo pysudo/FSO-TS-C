@@ -5,6 +5,7 @@ import {calculator} from "./calculate";
 
 
 const app = express();
+app.use(express.json());
 
 
 app.get("/ping", (_req, res) => {
@@ -29,7 +30,7 @@ app.post("/calculate", (req, res) => {
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const result = calculator(Number(value1), Number(value2), op);
-  return res.send(result);
+  return res.send(result.toString());
 });
 
 const PORT = 3303;
