@@ -11,11 +11,13 @@ const calculator = (a: number, b: number, op: Operation): number => {
   default:
     throw new Error("Operation is not multiply, add or divide!");
   }
-}
+};
 
 
 try {
-  console.log(calculator(4, 5,'add'));
+  if (process.argv[1] === __filename) {
+    console.log(calculator(4, 5,'add'));
+  }
 }
 catch(error: unknown) {
   let errorMessage = "Something went wrong!";

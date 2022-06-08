@@ -8,7 +8,8 @@
     "multiply": "ts-node multiply.ts",
     "calculate": "ts-node calculate.ts",
     "start": "ts-node index.ts",
-    "dev": "ts-node-dev index.ts"
+    "dev": "ts-node-dev index.ts",
+    "lint": "eslint --ext .ts ."
   },
   "keywords": [],
   "author": "",
