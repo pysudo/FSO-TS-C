@@ -2,7 +2,7 @@ import { DairyEntry } from "../src/types";
 
 
 const dairyEntries: Array<DairyEntry> = [
-  {
+    {
         "id": 1,
         "date": "2017-01-01",
         "weather": "rainy",
