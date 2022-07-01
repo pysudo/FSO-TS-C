@@ -1,8 +1,19 @@
-export type Weather = "sunny" | "rainy" | "cloudy" | "windy" | "stormy";
+export enum Weather {
+  Sunny = "sunny",
+  Rainy = "rainy",
+  Cloudy = "cloudy",
+  Stormy = "stormy",
+  Windy = "windy"
+}
 
-export type Visibility = "great" | "good" | "ok" | "poor";
+export enum Visibility {
+  Great = "great",
+  Good = "good",
+  Ok = "ok",
+  Poor = "poor"
+}
 
-export interface DairyEntry {
+export interface DiaryEntry {
   id: number;
   date: string;
   weather: Weather;
@@ -10,4 +21,6 @@ export interface DairyEntry {
   comment: string;
 }
 
-export type NonSensitiveEntry = Omit<DairyEntry, "comment">;
+export type NonSensitiveEntry = Omit<DiaryEntry, "comment">;
+
+export type newDiaryEntry = Omit<DiaryEntry, "id">;
